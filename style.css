@@ -366,3 +366,100 @@ footer a {
   width: auto
   height: 25px
 }
+
+/* --- 4-Column Book Shelf Page Styles --- */
+.book-shelf-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Divides into exactly 4 columns */
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.shelf-column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Force inner shelf container boxes to scroll or grow naturally */
+.shelf-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px 8px;
+    min-height: 400px;
+}
+
+/* Custom Header Color Varieties */
+.col-hdr-pink { background-color: #ffdef2 !important; border-color: #ffb7b2 !important; }
+.col-hdr-green { background-color: #e2f4d9 !important; border-color: #a3c9a8 !important; }
+.col-hdr-gray { background-color: #eee; border-color: #ccc !important; }
+
+/* Individual Book Presentation Styling */
+.book-entry {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #fff;
+    border: 1px dashed #a3c9a8;
+    padding: 8px 4px;
+}
+
+/* Book Cover Framework Box */
+.book-cover {
+    background-color: #ffffff;
+    border: 1px solid #a3c9a8;
+    padding: 4px;
+    display: inline-block;
+    box-shadow: 2px 2px 0px rgba(0,0,0,0.02);
+    margin-bottom: 6px;
+}
+
+.book-cover img {
+    width: 85px;
+    height: 125px;
+    object-fit: cover; 
+    display: block;
+}
+
+.book-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.book-title {
+    font-size: 11px;
+    font-weight: bold;
+    color: #4a3b32;
+    line-height: 1.2;
+}
+
+.book-author {
+    font-size: 10px;
+    color: #8c7365;
+}
+
+.book-progress, .book-reason, .book-rating-label {
+    font-size: 9px;
+    margin-top: 3px;
+    font-style: italic;
+}
+
+.book-progress { color: #b58392; }
+.book-reason { color: #888; }
+
+.star-rating {
+    font-size: 11px;
+    color: #ffb7b2;
+    margin-top: 2px;
+    letter-spacing: 1px;
+}
+
+.dnf-fade {
+    opacity: 0.75;
+    border-color: #ccc;
+}
+.dnf-fade .book-cover {
+    border-color: #ccc;
+}
